@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-25T09:33:42 IST" name="Default suite" finished-at="2024-06-25T09:34:06 IST" duration-ms="24059">
+    <groups>
+    </groups>
+    <test started-at="2024-06-25T09:33:42 IST" name="Default test" finished-at="2024-06-25T09:34:06 IST" duration-ms="24059">
+      <class name="com.ust.testcases.TestPath">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.ust.testcases.TestPath@1cd629b3]" started-at="2024-06-25T09:33:43 IST" name="setUp" finished-at="2024-06-25T09:33:43 IST" duration-ms="833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="getSingleResourceRequestTest()[pri:0, instance:com.ust.testcases.TestPath@1cd629b3]" started-at="2024-06-25T09:33:43 IST" name="getSingleResourceRequestTest" finished-at="2024-06-25T09:33:53 IST" duration-ms="9454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSingleResourceRequestTest -->
+        <test-method signature="getListResourcesTest()[pri:1, instance:com.ust.testcases.TestPath@1cd629b3]" started-at="2024-06-25T09:33:53 IST" name="getListResourcesTest" finished-at="2024-06-25T09:33:54 IST" duration-ms="1003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getListResourcesTest -->
+        <test-method signature="postResourcesRequest(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.ust.testcases.TestPath@1cd629b3]" started-at="2024-06-25T09:33:55 IST" name="postResourcesRequest" data-provider="data" finished-at="2024-06-25T09:33:56 IST" duration-ms="1028" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Daily Activity Recap]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Brief summary of today's events and accomplishments.]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postResourcesRequest -->
+        <test-method signature="postResourcesRequest(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.ust.testcases.TestPath@1cd629b3]" started-at="2024-06-25T09:33:56 IST" name="postResourcesRequest" data-provider="data" finished-at="2024-06-25T09:34:00 IST" duration-ms="4099" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Recipe Collection]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Compilation of favorite dishes and cooking instructions.]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <exception class="javax.net.ssl.SSLHandshakeException">
+            <message>
+              <![CDATA[Remote host terminated the handshake]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+at java.base/sun.security.ssl.SSLSocketImpl.handleEOF(SSLSocketImpl.java:1719)
+at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1518)
+at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1425)
+at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+at org.apache.http.conn.ssl.SSLSocketFactory.createLayeredSocket(SSLSocketFactory.java:570)
+at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:554)
+at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:415)
+at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)
+at io.restassured.internal.http.HTTPBuilder$post$3.call(Unknown Source)
+at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1209)
+at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+at io.restassured.filter.Filter$filter.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+at io.restassured.filter.Filter$filter.call(Unknown Source)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.FilterContext$next.call(Unknown Source)
+at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+at io.restassured.filter.Filter$filter.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+at io.restassured.filter.Filter$filter.call(Unknown Source)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.FilterContext$next.call(Unknown Source)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
+at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:260)
+at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+at com.ust.endpoints.UserEndPoints.postReq(UserEndPoints.java:59)
+at com.ust.testcases.TestPath.postResourcesRequest(TestPath.java:63)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
+at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1510)
+... 127 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- javax.net.ssl.SSLHandshakeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postResourcesRequest -->
+        <test-method signature="postResourcesRequest(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.ust.testcases.TestPath@1cd629b3]" started-at="2024-06-25T09:34:00 IST" name="postResourcesRequest" data-provider="data" finished-at="2024-06-25T09:34:02 IST" duration-ms="1726" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Travel Bucket List]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[List of dream destinations to visit someday.]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postResourcesRequest -->
+        <test-method signature="putRequestTest()[pri:3, instance:com.ust.testcases.TestPath@1cd629b3]" started-at="2024-06-25T09:34:02 IST" name="putRequestTest" finished-at="2024-06-25T09:34:03 IST" duration-ms="728" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- putRequestTest -->
+        <test-method signature="patchRequestTest()[pri:4, instance:com.ust.testcases.TestPath@1cd629b3]" started-at="2024-06-25T09:34:03 IST" name="patchRequestTest" finished-at="2024-06-25T09:34:04 IST" duration-ms="1010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchRequestTest -->
+        <test-method signature="deleteRequestTest()[pri:5, instance:com.ust.testcases.TestPath@1cd629b3]" started-at="2024-06-25T09:34:04 IST" name="deleteRequestTest" finished-at="2024-06-25T09:34:05 IST" duration-ms="768" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteRequestTest -->
+        <test-method signature="filterRequestTest()[pri:6, instance:com.ust.testcases.TestPath@1cd629b3]" started-at="2024-06-25T09:34:05 IST" name="filterRequestTest" finished-at="2024-06-25T09:34:05 IST" duration-ms="731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterRequestTest -->
+        <test-method signature="nestRequestTest()[pri:7, instance:com.ust.testcases.TestPath@1cd629b3]" started-at="2024-06-25T09:34:05 IST" name="nestRequestTest" finished-at="2024-06-25T09:34:06 IST" duration-ms="627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nestRequestTest -->
+      </class> <!-- com.ust.testcases.TestPath -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
