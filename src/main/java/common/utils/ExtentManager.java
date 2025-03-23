@@ -1,4 +1,4 @@
-package com.ust.utils;
+package common.utils;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;

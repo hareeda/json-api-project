@@ -1,4 +1,4 @@
-package com.ust.payloads;
+package payloads;
 
 public class UserModel {
 

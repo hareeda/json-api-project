@@ -1,4 +1,4 @@
-package com.ust.testcases;
+package api.testclasses;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 import static org.hamcrest.Matchers.equalTo;
@@ -11,13 +11,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.ust.endpoints.Routes;
-import com.ust.endpoints.UserEndPoints;
-import com.ust.listener.ExtentReportsListener;
-import com.ust.payloads.UserModel;
-
+import endpointsUtil.Routes;
+import endpointsUtil.UserEndPoints;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import payloads.UserModel;
+import test.listener.ExtentReportsListener;
 
 @Listeners(ExtentReportsListener.class)
 public class TestPath {

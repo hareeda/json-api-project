@@ -1,4 +1,4 @@
-package com.ust.listener;
+package test.listener;
 
 import java.io.IOException;
 
@@ -11,8 +11,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.ust.utils.ExtentManager;
 
+import common.utils.ExtentManager;
 import io.restassured.response.Response;
 
 public class ExtentReportsListener implements ITestListener {

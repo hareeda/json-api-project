@@ -1,11 +1,10 @@
-package com.ust.endpoints;
+package endpointsUtil;
 
-
-import com.ust.payloads.UserModel;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import payloads.UserModel;
 
 public class UserEndPoints {
 

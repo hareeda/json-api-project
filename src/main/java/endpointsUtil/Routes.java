@@ -1,4 +1,4 @@
-package com.ust.endpoints;
+package endpointsUtil;
 
 public class Routes {
 

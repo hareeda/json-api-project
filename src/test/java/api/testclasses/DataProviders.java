@@ -1,9 +1,9 @@
-package com.ust.testcases;
+package api.testclasses;
 
 import java.io.File;
 import org.testng.annotations.DataProvider;
 
-import com.ust.utils.ExcelReader;
+import common.utils.ExcelReader;
 
 public class DataProviders {
 
