@@ -4,9 +4,17 @@ Background:
   	* url 'https://jsonplaceholder.typicode.com'
   	* configure ssl = { trustAll: true }
   	* def id = 1
+  	* def getsinglepath = '/posts/1'
+  	* def getlistpath = '/posts'
+  	* def postpath = '/posts'
+  	* def putpath = '/posts/1'
+  	* def patchpath = '/posts/1'
+  	* def deletepath = '/posts/1'
+  	* def filterpath = '/comments'
+  	* def nestedpath = '/posts/1/comments'
 
 Scenario Outline: Get Single Resource
-  	Given path '/posts/<id>'
+  	Given path getsinglepath
   	And header Content-Type = 'application/json'
   	When method GET
   	Then status 200
@@ -19,14 +27,14 @@ Scenario Outline: Get Single Resource
     	| 1  |
 
 Scenario: Get list of resources
-  	Given path '/posts'
+  	Given path getlistpath
   	And header Content-Type = 'application/json'
   	When method GET
   	Then status 200
   	And print response
 
 Scenario Outline: Create multiple posts
-  	Given path '/posts'
+  	Given path postpath
   	And request
   	"""
   	{
@@ -51,7 +59,7 @@ Scenario Outline: Create multiple posts
     	| Travel Bucket List   | List of dream destinations to visit someday.               | 3      |
 
 Scenario Outline: Update resources using PUT
-  	Given path '/posts/<id>'
+  	Given path putpath
   	And header Content-Type = 'application/json'
   	And request
   	"""
@@ -73,7 +81,7 @@ Scenario Outline: Update resources using PUT
     	| 1  | Daily Activity Recap | Brief summary of todays events and accomplishments.        | 1      | 
 
 Scenario Outline: Update resources using PATCH
-  	Given path '/posts/<id>'
+  	Given path patchpath
   	And header Content-Type = 'application/json'
   	And request
   	"""
@@ -97,7 +105,7 @@ Scenario Outline: Update resources using PATCH
     	| 1  | Daily Recap | Brief summary of todays events and accomplishments.        | 1      | 
 
 Scenario Outline: Delete a resource
-  	Given path '/posts/<id>'
+  	Given path deletepath
   	And header Content-Type = 'application/json'
   	When method DELETE
   	Then status 200
@@ -108,7 +116,7 @@ Scenario Outline: Delete a resource
     	| 1  |
 
 Scenario: Filter resources
-    Given path '/comments'
+    Given path filterpath
     And header Content-Type = 'application/json'
     And param postId = 1
     When method GET
@@ -116,7 +124,7 @@ Scenario: Filter resources
     And print response
 
 Scenario: Nested resources
-    Given path '/posts/1/comments'
+    Given path nestedpath
     And header Content-Type = 'application/json'
     When method GET
     Then status 200
